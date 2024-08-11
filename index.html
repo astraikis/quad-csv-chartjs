@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Quad</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Quad</h1>
+
+        <div id="import-container">
+            <h3>Import data:</h3>
+            <button onclick="document.getElementById('file-input').click()">Select CSV</button>
+            <input type="file" accept=".csv" id="file-input" style="display:none">
+        </div>
+
+        <div id="filters">
+            <div class="grid-row">
+                <div class="grid-btn" id="tl" onclick="setGrid('tl')"></div>
+                <div class="grid-btn" id="tr" onclick="setGrid('tr')"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-btn" id="bl" onclick="setGrid('bl')"></div>
+                <div class="grid-btn" id="br" onclick="setGrid('br')"></div>
+            </div>
+        </div>
+
+        <div id="chart-outer">
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+            <div id="chart-details">
+                <p id="chart-details-empty">Click on a bubble to see more details.</p>
+                <div id="chart-details-container">
+                    <img src="https://247wallst.com/wp-content/uploads/2021/07/imageForEntry23-RWU.jpg" alt="Pizza restaurant exterior.">
+                    <h2 id="chart-details-name"></h2>
+                    <p id="chart-details-rating"></p>
+                    <p id="chart-details-price"></p>
+                    <p id="chart-details-num-reviews"></p>
+                </div>
+            </div>
+        </div>
+                
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./chartjs-plugin-annotation.min.js"></script>
+	    <script src="index.js"></script>
+    </body>
+</html>
